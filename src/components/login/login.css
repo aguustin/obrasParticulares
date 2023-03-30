@@ -1,0 +1,99 @@
+.nav-direccion-obras{
+    background-color: rgb(81, 16, 107);
+    color: white;
+    width: 100vw;
+    height: 100px;
+}
+
+.nav-direccion-obras h1{
+    margin-top: 0;
+}
+
+.form{
+    width: 40vw;
+    min-width: 450px;
+    background-color: rgb(233, 232, 232);
+    box-shadow: 2px 7px 13px 0px rgba(0,0,0,0.7);
+    -webkit-box-shadow: 2px 7px 13px 0px rgba(0,0,0,0.7);
+    -moz-box-shadow: 2px 7px 13px 0px rgba(0,0,0,0.7);
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 1.3rem;
+}
+
+.card-body{
+    text-align: center;
+    margin: 0 auto;
+}
+
+label{
+    font-weight: 600;
+    margin-top: 2rem;
+}
+
+.form input{
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid black;
+    width: 100%;
+    outline: none;
+}
+
+.card-header{
+    background-color: rgb(81, 16, 107);
+    color: white;
+    font-size: 25px;
+    padding: .6rem 0rem;
+}
+
+.alignment-inputs{
+    text-align: left;
+    width: 70%;
+}
+
+.form_input{
+    margin-top: 2rem;
+}
+
+.form_label{
+    position: absolute;
+    left: 700px;
+}
+
+.form_input:focus + .form_label,
+.form_input:not(:placeholder-shown) + .form_label{
+    transform: translateY(-20px) scale(.9);
+    transform-origin: left top;
+    color: rgb(81, 16, 107);
+    transition: all .5s;
+}
+
+.entrar-registrarme{
+    text-align: center;
+    font-weight: 600;
+}
+
+.entrar-registrarme > button{
+    background-color: rgb(255, 136, 0);
+    padding: .5rem 4rem;
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 5px;
+    box-shadow: 2px 7px 13px 0px rgba(0,0,0,0.7);
+    -webkit-box-shadow: 2px 7px 13px 0px rgba(0,0,0,0.7);
+    -moz-box-shadow: 2px 7px 13px 0px rgba(0,0,0,0.7);
+    border: none;
+}
+
+.entrar-registrarme > div{
+    width: 180px;
+    margin-top: 18px;
+   
+}
+
+.entrar-registrarme > div button{
+    background: none;
+    border: none;
+}
