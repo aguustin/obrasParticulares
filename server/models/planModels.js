@@ -65,7 +65,8 @@ const planSchema = new mongoose.Schema({
             }]
         },
       asignaciones: {
-        objetoPlano:[{
+        objetoPlano:
+        [{
           fecha:{type: Date},
           admin_id:{ type:String },
           admin_email:{ type:String },

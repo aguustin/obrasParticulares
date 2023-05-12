@@ -1,12 +1,19 @@
 import padrones from "../models/planModels.js";
 
-export const createPlan = (req, res) => {
-    const {padron, expediente, plano, usuario} = req.body;
+/*export const createPlan = async (req, res) => {
+    const {padron, expediente, tipoPlano, plano, usuario} = req.body;
+    //crear indice para el "tipo_plano" cuando se elija
+    const response = await padrones.createIndex({"planos.objetoPlano": tipoPlano});
+    response.send(response);
+}*/
+
+export const getPlansController = async (req, res) => {
+    const all = await padrones.find({}).limit(10);
+    res.send(all);
 }
 
 export const allForStatePlansController = async (req, res) => {
     const {estado} = req.params;
-    console.log(estado);
     const todos = await padrones.find({'expedientes.d4001Estado': estado}).limit(10);
     res.send(todos);
 }
@@ -22,10 +29,6 @@ export const searchPlan = async (req, res) => {
     }
     if(response.length === 0){
         const response = await padrones.find({'expedientes.d4001Padron': {$regex: search, $options: "i"}});
-        res.send(response);   
-    }
-    if(response.length === 0){
-        const response = await padrones.find({'expedientes.d4001IdExpediente': {$regex: search, $options: "i"}});
         res.send(response);   
     }
     if(response.length === 0){

@@ -7,7 +7,7 @@ router.post('/createUser', createProfesionalUser);
 
 router.post('/authenticateUser', authenticateProfesionalUser);
 
-router.get('/', allDataController);
+router.get('/allUsers', allDataController);
 
 router.delete('/', deleteAllUsers);
 

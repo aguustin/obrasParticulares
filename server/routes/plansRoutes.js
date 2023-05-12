@@ -1,12 +1,14 @@
 import { Router } from "express";
 
-import { allForStatePlansController, searchPlan } from "../controller/plansController.js";
+import { allForStatePlansController, getPlansController, searchPlan } from "../controller/plansController.js";
 
 const router = Router();
 
+router.get('/all', getPlansController);
+
 router.post('/createPlan');
 
-router.get('/r/:estado', allForStatePlansController);
+router.get('/estados/:estado', allForStatePlansController);
 
 router.get('/search/:search', searchPlan);
 

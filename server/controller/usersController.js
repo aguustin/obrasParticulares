@@ -34,8 +34,8 @@ export const authenticateProfesionalUser = async (req, res) => {
     const {email, password} = req.body;
    
     const emailExist = await Users.find({email: email});
-
-    if(emailExist.length !== 0){
+    console.log(emailExist);
+    if(emailExist){
         const passwordVerify = await bcrypt.compare(password, emailExist[0].password);
 
         if(!passwordVerify){
