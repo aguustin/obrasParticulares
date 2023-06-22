@@ -32,7 +32,6 @@ export const createProfesionalUser = async (req, res) => {
 
 export const authenticateProfesionalUser = async (req, res) => {
     const {email, password} = req.body;
-   
     const emailExist = await Users.find({email: email});
     console.log(emailExist);
     if(emailExist){
